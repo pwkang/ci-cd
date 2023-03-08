@@ -1,0 +1,11 @@
+name: my-first-actions
+run-name: ${{ github.actor }} is running my-first-action
+on: [ push ]
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-first-step
+        run: echo "Hello World"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
